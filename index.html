@@ -10,7 +10,7 @@
     
 </head>
 <body>
-    <script type="text/javascript" src="assets/js/script.js"></script> 
+    
     <div class="container main-content">
         <div class="row">
             <div class="col">
@@ -23,8 +23,8 @@
                 <h2>Generate a Password</h2>
                 <div class="hr"></div>
                 <div class="Password-content">
-                    <textarea class="passwordBox msgDisplay"
-                    
+                    <textarea 
+                    class="passwordBox msgDisplay"
                     id="password"
                     placeholder="Your Secure Password"
                     aria-label="Generated Password"
@@ -34,17 +34,17 @@
                 <div class="hr"></div>
                 <div class="row">
                     <div class="key col-sm-12 col-md-6 col-xl-6">
-                        <button type="button" class="btn btn-lg btn-primary">Generate Password</button>
+                        <button type="button" class="btn btn-lg btn-primary" id="btnGenerate">Generate Password</button>
                     </div>
         
                     <div class="key col-sm-12 col-md-6 col-xl-6">
-                        <button type="button" class="btn1 btn-lg btn-primary">Copy to Clipboard</button>
+                        <button type="button" class="btn1 btn-lg btn-primary" id="btnCopy">Copy to Clipboard</button>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
-    
+    <script type="text/javascript" src="assets/js/script.js"></script>  
 </body>
 </html>

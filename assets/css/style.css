@@ -65,18 +65,37 @@ p{
     align-self: center;
     display: flex;
     flex-direction: column;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .btn{
+    /* width: auto; */
     align-self: center;
     background-color: rgb(76, 112, 102);
     
-    padding: 10px 20%;
+    padding: 10px 5%;
 }
 
 .btn1{
-    
+    /* width: auto; */
     align-self: center;
-    padding: 10px 20%;
+    padding: 10px 5%;
 
+}
+
+@media screen and (max-width:780px){
+    .btn{
+        margin:10px 20%;
+        width: 100%;
+        /* padding-right: 0px;
+        padding-left: 0px; */
+        
+    }
+    .btn1{
+        margin: 10px 20%;
+        width:100%;
+        /* padding-left: 0px;
+        padding-right: 0px; */
+    }
 }
