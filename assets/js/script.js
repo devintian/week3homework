@@ -26,6 +26,7 @@ var charset1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//26
 var charset2 = "0123456789";//10
 var charset3 = "~·!@#$%^&*()<>/?.,;:=-+-[]{}|";
 
+
 // function identify(){
 // 	// console.log("hello2");
 // 	if(specialChar === false && numericChar===false && upperChar===false && lowerChar===false){
