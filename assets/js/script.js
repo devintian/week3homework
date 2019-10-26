@@ -2,8 +2,20 @@ var specialChar = confirm("special characters?");
 var numericChar = confirm("number characters?");
 var upperChar = confirm("upper characters?");
 var lowerChar =confirm("lower characters?");
-var pwLength = prompt("Please enter your password length");
+while(specialChar === false && numericChar===false && upperChar===false && lowerChar===false){
+	console.log("hello");
+	alert("Please at least choose one type of charater!");
+	specialChar = confirm("special characters?");
+	numericChar = confirm("number characters?");
+	upperChar = confirm("upper characters?");
+	lowerChar =confirm("lower characters?");
+};
 
+var pwLength = prompt("Please enter your password length");
+while(pwLength<8 || pwLength>128){
+	alert("Please define your password between 8 and 128!");
+	var pwLength = prompt("Please enter your password length");
+};
 var btnGen = document.getElementById("btnGenerate");
 var btnCopy = document.getElementById("btnCopy");
 
@@ -14,20 +26,23 @@ var charset1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//26
 var charset2 = "0123456789";//10
 var charset3 = "~·!@#$%^&*()<>/?.,;:=-+-[]{}|";
 
-function indentify(){
-	if(specialChar === false && numericChar===false && upperChar===false && lowerChar===false){
-		alert("Please at least choose one type of charater!");
-		// var specialChar = confirm("special characters?");
-		// var number = confirm("number characters?");
-		// var upper = confirm("upper characters?");
-		// var lower =confirm("lower characters?");
-	}
-	else if(pwLength<8 || pwLength>128){
-		alert("Please define your password between 8 and 128!");
-		// var pwLength = prompt("Please enter your password length");
-	}
+// function identify(){
+// 	// console.log("hello2");
+// 	if(specialChar === false && numericChar===false && upperChar===false && lowerChar===false){
+// 		console.log("hello");
+// 		alert("Please at least choose one type of charater!");
+// 		specialChar = confirm("special characters?");
+// 		numericChar = confirm("number characters?");
+// 		upperChar = confirm("upper characters?");
+// 		lowerChar =confirm("lower characters?");
+// 	}
+// 	else if(pwLength<8 || pwLength>128){
+// 		alert("Please define your password between 8 and 128!");
+// 		var pwLength = prompt("Please enter your password length");
+// 	}
 
-}
+// }
+
 
 function generateSpec(number){
 	this.N =number;
@@ -147,10 +162,14 @@ function generatePassword(isLength){
 		password += generateUpper(y);
 		password += generateLow(L-3*y);
 	}
+	// else if (!specialChar && !numericChar && !lowerChar && !upperChar){
+	// 	alert("Please at least choose one type of charater!");
+	// }
 	return password;
 	
 
 }
+
 
 passwordBox.innerHTML = generatePassword(pwLength);
 
@@ -162,7 +181,7 @@ btnCopy.addEventListener("click",function(){
 	passwordBox.select();
 	document.execCommand("copy");
 	
-})
+});
 
 // // generatePassword(pwLength);
 // console.log(generatePassword(pwLength));
